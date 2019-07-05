@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 
-URL = 'https://api.telegram.org/bot827325038:AAF0ypg1nF575Vs-qI2TwCdSWgQMQBlR1e4/'
+
 
 
 
@@ -35,8 +35,9 @@ def json_parser(js):
 @app.route('/', methods= ['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        r = request.get_json()
-        return
+        r = request.get_json()   # get chat id of new user who texted my bot
+        write_json(r)
+        return jsonify(r)
     return '<h1>Hello bot</h1>'
 
 
