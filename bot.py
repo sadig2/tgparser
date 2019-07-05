@@ -1,5 +1,9 @@
 import requests
 import json
+from flask import Flask , request
+from flask import jsonify
+
+app = Flask(__name__)
 
 
 
@@ -28,6 +32,14 @@ def json_parser(js):
 
 
 
+@app.route('/', methods= ['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        r = request.get_json()
+        return
+    return '<h1>Hello bot</h1>'
+
+
 
 
 def run():
@@ -40,4 +52,8 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    app.run()
+
+
+
+#     https://api.telegram.org/bot827325038:AAF0ypg1nF575Vs-qI2TwCdSWgQMQBlR1e4/setwebhook?url=https://342b81d4.ngrok.io/
