@@ -2,13 +2,22 @@ import requests
 import json
 from flask import Flask , request
 from flask import jsonify
+from urllib.parse import urljoin
 
 app = Flask(__name__)
 
 
 
+def read_key():
+    with open('key.json') as f:
+        jso = json.load(f)
+    return jso['key']
 
 
+URL = read_key()
+
+
+# URL = 'https://api.telegram.org/bot827325038:AAF0ypg1nF575Vs-qI2TwCdSWgQMQBlR1e4/'
 
 
 
@@ -32,22 +41,23 @@ def json_parser(js):
 
 
 
-@app.route('/', methods= ['GET', 'POST'])
+@app.route('/', methods= ['POST','GET'])
 def index():
     if request.method == 'POST':
-        r = request.get_json()   # get chat id of new user who texted my bot
+        r = request.get_json()              # get chat id of new user who texted my bot
         write_json(r)
         return jsonify(r)
-    return '<h1>Hello bot</h1>'
+    return '<h1>Hello blat</h1>'
 
 
 
 
-def run():
-    re = requests.get(URL+'getUpdates')
-    js = re.json()
-    chat_id, text = json_parser(js)
-    send_message(chat_id, text)
+# def run():
+#     re = requests.get(urljoin(URL, 'getUpdates'))
+#     js = re.json()
+#     print(js)
+#     chat_id, text = json_parser(js)
+#     send_message(chat_id, text)
 
 
 
@@ -57,4 +67,4 @@ if __name__ == '__main__':
 
 
 
-#     https://api.telegram.org/bot827325038:AAF0ypg1nF575Vs-qI2TwCdSWgQMQBlR1e4/setwebhook?url=https://342b81d4.ngrok.io/
+#     https://api.telegram.org/bot827325038:AAF0ypg1nF575Vs-qI2TwCdSWgQMQBlR1e4/setwebhook?url=https://720b8e54.ngrok.io

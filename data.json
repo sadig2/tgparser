@@ -1,68 +1,21 @@
 {
-  "ok": true,
-  "result": [
-    {
-      "update_id": 404068016,
-      "message": {
-        "message_id": 7,
-        "from": {
-          "id": 524239771,
-          "is_bot": false,
-          "first_name": "Clann",
-          "last_name": "Zú",
-          "language_code": "en"
-        },
-        "chat": {
-          "id": 524239771,
-          "first_name": "Clann",
-          "last_name": "Zú",
-          "type": "private"
-        },
-        "date": 1562314068,
-        "text": "fef"
-      }
+  "update_id": 404068025,
+  "message": {
+    "message_id": 17,
+    "from": {
+      "id": 524239771,
+      "is_bot": false,
+      "first_name": "Clann",
+      "last_name": "Zú",
+      "language_code": "en"
     },
-    {
-      "update_id": 404068017,
-      "message": {
-        "message_id": 8,
-        "from": {
-          "id": 524239771,
-          "is_bot": false,
-          "first_name": "Clann",
-          "last_name": "Zú",
-          "language_code": "en"
-        },
-        "chat": {
-          "id": 524239771,
-          "first_name": "Clann",
-          "last_name": "Zú",
-          "type": "private"
-        },
-        "date": 1562315378,
-        "text": "vfdgfd"
-      }
+    "chat": {
+      "id": 524239771,
+      "first_name": "Clann",
+      "last_name": "Zú",
+      "type": "private"
     },
-    {
-      "update_id": 404068018,
-      "message": {
-        "message_id": 9,
-        "from": {
-          "id": 524239771,
-          "is_bot": false,
-          "first_name": "Clann",
-          "last_name": "Zú",
-          "language_code": "en"
-        },
-        "chat": {
-          "id": 524239771,
-          "first_name": "Clann",
-          "last_name": "Zú",
-          "type": "private"
-        },
-        "date": 1562315379,
-        "text": "fdsfsd"
-      }
-    }
-  ]
+    "date": 1562329087,
+    "text": "dfgfd"
+  }
 }
